@@ -20,49 +20,73 @@ public class Exercises {
 	}
 
 	public int difference(int[] numbers) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return -1;		// default return value to ensure compilation
 	}
 
 	public double biggest(double[] numbers) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return -1;		// default return value to ensure compilation
 	}
 
 	public String[] middle(String[] values) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return null;	// default return value to ensure compilation
 	}
 
 	public boolean increasing(int[] numbers) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public boolean consecutive(int[] numbers) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public boolean balance(int[] numbers) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public int clumps(String[] values) {
-		// write your code here
+        // input verification
+
+        // write your code here
+        // code
 
 		return -1;		// default return value to ensure compilation
 	}

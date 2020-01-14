@@ -14,9 +14,17 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		// write your code here
+        if (values == null || n < 0 && values.length < n) {
+            return null;
+        }
 
-		return null;	// default return value to ensure compilation
+        // write your code here
+        String[] combinedString = new String[3];
+        combinedString[0] = values[0];
+        combinedString[1] = values[n];
+        return combinedString;
+
+		// return null; default return value to ensure compilation
 	}
 
 	public int difference(int[] numbers) {

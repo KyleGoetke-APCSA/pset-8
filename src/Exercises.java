@@ -1,24 +1,15 @@
 public class Exercises {
 
-     public static void main() {
-         commonEnd();
-         endsMeet();
-         difference();
-         biggest();
-         middle();
-         increasing();
-         everywhere();
-         consecutive();
-         balance();
-         clumps();
-     }
-
 	public boolean commonEnd(int[] a, int[] b) {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
 		}
 
 		// write your code here
+
+        // requirements
+        // a and b must not be null
+        // a and b must have a length of at least 1
 
 		return false;	// default return value to ensure compilation
 	}

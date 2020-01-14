@@ -1,5 +1,12 @@
 public class Exercises {
 
+    /*
+    RUN THIS USING:
+    1) cd ~/???/pset8/src
+    2) javac Exercises.java
+    3) java -jar grader.jar
+    */
+
 	public boolean commonEnd(int[] a, int[] b) {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;

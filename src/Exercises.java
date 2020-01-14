@@ -1,5 +1,18 @@
 public class Exercises {
 
+     public static void main() {
+         commonEnd();
+         endsMeet();
+         difference();
+         biggest();
+         middle();
+         increasing();
+         everywhere();
+         consecutive();
+         balance();
+         clumps();
+     }
+
 	public boolean commonEnd(int[] a, int[] b) {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;

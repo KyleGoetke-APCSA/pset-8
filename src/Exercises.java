@@ -6,10 +6,9 @@ public class Exercises {
 		}
 
 		// write your code here
-
-        // requirements
-        // a and b must not be null
-        // a and b must have a length of at least 1
+        if ((a[0] == b[0]) || (a[a.length] == b[b.length])) {
+            return true;
+        }
 
 		return false;	// default return value to ensure compilation
 	}

@@ -3,9 +3,7 @@ public class Exercises {
     /*
     HOW TO RUN THIS
     1) cd ~/???/pset8/src
-    2) javac Exercises.java
-    3) cd ~/???/pset8/test/grader
-    4) java -jar grader.jar [exercise name]
+    2) ./grademe.sh biggest
     */
 
     public boolean commonEnd(int[] a, int[] b) {

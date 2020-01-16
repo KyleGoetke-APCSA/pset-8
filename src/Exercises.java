@@ -2,11 +2,12 @@ public class Exercises {
 
     /*
     HOW TO RUN THIS
-    1) cd ~/???/pset8/src
+    1) cd ~/???/pset8/tests
     2) ./grademe.sh biggest
     */
 
     public boolean commonEnd(int[] a, int[] b) {
+        //input verification
         if (a == null || a.length == 0 || b == null || b.length == 0) {
             return false;
         }
@@ -20,6 +21,7 @@ public class Exercises {
     }
 
     public String[] endsMeet(String[] values, int n) {
+        // input verification
         String emptyString[] = new String[0];
         if (values == null || n < 0 || values.length < n) {
             return emptyString;
@@ -51,9 +53,9 @@ public class Exercises {
             return -1;
         }
 
+        // write your code here
         int largestValue = numbers[0];
         int smallestValue = numbers[0];
-        // write your code here
         for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i] > largestValue) {
                 largestValue = numbers[i];
@@ -70,9 +72,29 @@ public class Exercises {
 
     public double biggest(double[] numbers) {
         // input verification
+        if (numbers == null || numbers.length % 2 == 0 || numbers.length < 3) {
+            return -1;
+        }
+
+        for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] < 0) {
+                return -1;
+            }
+		}
 
         // write your code here
-        // code
+        double firstElement = numbers[0];
+        double lastElement = numbers[0];
+        double middleElement = numbers[numbers.length / 2];
+
+        if (firstElement > lastElement && firstElement > middleElement) {
+            return firstElement;
+        } else if (lastElement > middleElement && lastElement > firstElement) {
+            return lastElement;
+        } else if (middleElement > lastElement && middleElement > firstElement) {
+            return middleElement;
+        }
+
 
         return -1;        // default return value to ensure compilation
     }

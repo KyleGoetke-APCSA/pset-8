@@ -13,6 +13,7 @@ public class Exercises {
             return false;
         }
 
+        // write your code here
         if ((a[0] == b[0]) || (a[a.length-1] == b[b.length-1])) {
             return true;
         }
@@ -21,23 +22,25 @@ public class Exercises {
     }
 
     public String[] endsMeet(String[] values, int n) {
-        if (values == null || n < 0 && values.length < n) {
-            return null;
+        String emptyString[] = new String[0];
+        if (values == null || n < 0 || values.length < n) {
+            return emptyString;
         }
 
         // write your code here
         String[] combinedString = new String[n * 2];
-
+        int valueOfN = n;
 
         // go from first boi until nth boi
         for (int i = 0; i < n; i++) {
-            combinedString[i] = values[i];
-        }
+			combinedString[i] = values[i];
+		}
 
         // go from length - nth boi until last boi
-        for (int i = combinedString.length - n; i < combinedString.length; i++) {
-            combinedString[i] = values[i];
-        }
+        for (int i = n; i < n * 2; i++) {
+			combinedString[i] = values[values.length - valueOfN];
+            valueOfN--;
+		}
 
         return combinedString;
 

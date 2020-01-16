@@ -47,11 +47,25 @@ public class Exercises {
 
     public int difference(int[] numbers) {
         // input verification
+        if (numbers == null || numbers.length < 1) {
+            return -1;
+        }
 
+        int largestValue = numbers[0];
+        int smallestValue = numbers[0];
         // write your code here
-        // code
+        for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] > largestValue) {
+                largestValue = numbers[i];
+            }
+            if (numbers[i] < smallestValue) {
+                smallestValue = numbers[i];
+            }
+		}
 
-        return -1;        // default return value to ensure compilation
+        return largestValue - smallestValue;
+
+        // return -1; // default return value to ensure compilation
     }
 
     public double biggest(double[] numbers) {

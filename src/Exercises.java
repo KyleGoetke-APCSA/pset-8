@@ -1,10 +1,11 @@
 public class Exercises {
 
     /*
-    RUN THIS USING:
+    HOW TO RUN THIS
     1) cd ~/???/pset8/src
     2) javac Exercises.java
-    3) java -jar grader.jar
+    3) cd ~/???/pset8/test/grader
+    4) java -jar grader.jar [exercise name]
     */
 
 	public boolean commonEnd(int[] a, int[] b) {

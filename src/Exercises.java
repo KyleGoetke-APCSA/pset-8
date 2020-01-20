@@ -7,17 +7,14 @@ public class Exercises {
     */
 
     public boolean commonEnd(int[] a, int[] b) {
-        //input verification
+        // input verification
         if (a == null || a.length == 0 || b == null || b.length == 0) {
             return false;
-        }
-
-        // write your code here
-        if ((a[0] == b[0]) || (a[a.length-1] == b[b.length-1])) {
+        } else if ((a[0] == b[0]) || (a[a.length-1] == b[b.length-1])) {
             return true;
+        } else {
+            return false;
         }
-
-        return false;    // default return value to ensure compilation
     }
 
     public String[] endsMeet(String[] values, int n) {
@@ -27,7 +24,6 @@ public class Exercises {
             return emptyString;
         }
 
-        // write your code here
         String[] combinedString = new String[n * 2];
         int valueOfN = n;
 
@@ -43,8 +39,6 @@ public class Exercises {
 		}
 
         return combinedString;
-
-        // return null; default return value to ensure compilation
     }
 
     public int difference(int[] numbers) {
@@ -66,8 +60,6 @@ public class Exercises {
 		}
 
         return largestValue - smallestValue;
-
-        // return -1; // default return value to ensure compilation
     }
 
     public double biggest(double[] numbers) {
@@ -84,19 +76,16 @@ public class Exercises {
 
         // write your code here
         double firstElement = numbers[0];
-        double lastElement = numbers[0];
-        double middleElement = numbers[numbers.length / 2];
+        double lastElement = numbers[numbers.length - 1];
+        double middleElement = numbers[(int) Math.floor(numbers.length / 2)];
 
-        if (firstElement > lastElement && firstElement > middleElement) {
-            return firstElement;
-        } else if (lastElement > middleElement && lastElement > firstElement) {
-            return lastElement;
-        } else if (middleElement > lastElement && middleElement > firstElement) {
-            return middleElement;
-        }
+        double maximum = (firstElement > middleElement && firstElement > lastElement) ? firstElement :
+	 	(middleElement > lastElement) ? middleElement :
+	 	lastElement;
+	 	return maximum;
 
 
-        return -1;        // default return value to ensure compilation
+        // return -1;        // default return value to ensure compilation
     }
 
     public String[] middle(String[] values) {

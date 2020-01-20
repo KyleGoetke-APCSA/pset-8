@@ -29,14 +29,14 @@ public class Exercises {
 
         // go from first boi until nth boi
         for (int i = 0; i < n; i++) {
-			combinedString[i] = values[i];
-		}
+            combinedString[i] = values[i];
+        }
 
         // go from length - nth boi until last boi
         for (int i = n; i < n * 2; i++) {
-			combinedString[i] = values[values.length - valueOfN];
+            combinedString[i] = values[values.length - valueOfN];
             valueOfN--;
-		}
+        }
 
         return combinedString;
     }
@@ -51,13 +51,13 @@ public class Exercises {
         int largestValue = numbers[0];
         int smallestValue = numbers[0];
         for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] > largestValue) {
+            if (numbers[i] > largestValue) {
                 largestValue = numbers[i];
             }
             if (numbers[i] < smallestValue) {
                 smallestValue = numbers[i];
             }
-		}
+        }
 
         return largestValue - smallestValue;
     }
@@ -69,10 +69,10 @@ public class Exercises {
         }
 
         for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] < 0) {
+            if (numbers[i] < 0) {
                 return -1;
             }
-		}
+        }
 
         // write your code here
         double firstElement = numbers[0];
@@ -80,9 +80,9 @@ public class Exercises {
         double middleElement = numbers[(int) Math.floor(numbers.length / 2)];
 
         double maximum = (firstElement > middleElement && firstElement > lastElement) ? firstElement :
-	 	(middleElement > lastElement) ? middleElement :
-	 	lastElement;
-	 	return maximum;
+        (middleElement > lastElement) ? middleElement :
+        lastElement;
+        return maximum;
 
 
         // return -1;        // default return value to ensure compilation
@@ -107,16 +107,40 @@ public class Exercises {
         finalArray[0] = words[(int) Math.floor(words.length / 2) - 1];
         finalArray[1] = words[(int) Math.floor(words.length / 2)];
         finalArray[2] = words[(int) Math.floor(words.length / 2) + 1];
-	 	return finalArray;
+        return finalArray;
     }
 
     public boolean increasing(int[] numbers) {
         // input verification
+        if (numbers == null) {
+            return false;
+        } else if (numbers.length < 1) {
+            return false;
+        }
 
-        // write your code here
-        // code
+        int increaseCounter = 0;
+        int currentNumber = -1;
 
-        return false;    // default return value to ensure compilation
+        for (int i = 0; i < numbers.length; i++) {
+            if (i == 0) {
+                increaseCounter = 1;
+                currentNumber = numbers[i];
+            }
+
+            if (numbers[i] == currentNumber + 1) {
+                increaseCounter += 1;
+                currentNumber = numbers[i];
+            } else {
+                increaseCounter = 1;
+                currentNumber = numbers[i];
+            }
+
+            if (increaseCounter == 3) {
+                return true;
+            }
+        }
+
+        return false; // default return value to ensure compilation
     }
 
     public boolean everywhere(int[] numbers, int x) {

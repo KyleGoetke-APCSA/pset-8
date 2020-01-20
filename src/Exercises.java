@@ -88,13 +88,26 @@ public class Exercises {
         // return -1;        // default return value to ensure compilation
     }
 
-    public String[] middle(String[] values) {
-        // input verification
-
-        // write your code here
-        // code
-
-        return null;    // default return value to ensure compilation
+    public String[] middle(String[] words) {
+        //input verification
+        String[] empty = new String[0];
+        if (words == null) {
+            return empty;
+        } else if (words.length < 3 || words.length % 2 == 0) {
+            return empty;
+        }
+        for (int i = 0; i < words.length; i++) {
+            boolean containsNull = false;
+            containsNull = (words[i] == null) ? true : false;
+            if (containsNull) {
+                return empty;
+            }
+        }
+        String[] finalArray = new String[3];
+        finalArray[0] = words[(int) Math.floor(words.length / 2) - 1];
+        finalArray[1] = words[(int) Math.floor(words.length / 2)];
+        finalArray[2] = words[(int) Math.floor(words.length / 2) + 1];
+	 	return finalArray;
     }
 
     public boolean increasing(int[] numbers) {

@@ -118,24 +118,8 @@ public class Exercises {
             return false;
         }
 
-        int increaseCounter = 0;
-        int currentNumber = -1;
-
-        for (int i = 0; i < numbers.length; i++) {
-            if (i == 0) {
-                increaseCounter = 1;
-                currentNumber = numbers[i];
-            }
-
-            if (numbers[i] == currentNumber + 1) {
-                increaseCounter += 1;
-                currentNumber = numbers[i];
-            } else {
-                increaseCounter = 1;
-                currentNumber = numbers[i];
-            }
-
-            if (increaseCounter == 3) {
+        for (int i = 1; i < numbers.length-1; i++) {
+            if (numbers[i-1] < numbers[i] && numbers[i] < numbers [i+1]) {
                 return true;
             }
         }

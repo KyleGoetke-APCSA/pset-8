@@ -129,11 +129,31 @@ public class Exercises {
 
     public boolean everywhere(int[] numbers, int x) {
         // input verification
+        if (numbers == null || numbers.length < 1) {
+            return false;
+        }
 
-        // write your code here
-        // code
+        boolean inLastPosition = false;
+        int gapBetween = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == x) {
+                inLastPosition = true;
+                gapBetween = 0;
+            } else {
+                if (i == 1 && inLastPosition == false) {
+                    return false;
+                } else if (inLastPosition == false) {
+                    gapBetween++;
+                }
+                inLastPosition = false;
+            }
 
-        return false;    // default return value to ensure compilation
+            if (gapBetween == 2) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public boolean consecutive(int[] numbers) {

@@ -163,29 +163,29 @@ public class Exercises {
 		}
 
 		int remainder = -1;
-		int prevRemainder = -1;
-		int inARow = 0;
+		int previousRemainder = -1;
+		int numbersInARow = 0;
 		for (int i = 0; i < numbers.length; i++) {
 			remainder = numbers[i] % 2;
 			if (remainder == 1) {
-				if (prevRemainder == 1) {
-					inARow++;
+				if (previousRemainder == 1) {
+					numbersInARow++;
 				} else {
-					inARow = 1;
+					numbersInARow = 1;
 				}
 			} else {
-				if (prevRemainder == 0) {
-					inARow++;
+				if (previousRemainder == 0) {
+					numbersInARow++;
 				} else {
-					inARow = 1;
+					numbersInARow = 1;
 				}
 			}
 
-			if (inARow == 3) {
+			if (numbersInARow == 3) {
 				return true;
 			}
 
-			prevRemainder = remainder;
+			previousRemainder = remainder;
 		}
 
         return false;    // default return value to ensure compilation
